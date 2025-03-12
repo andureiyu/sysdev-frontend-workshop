@@ -1,42 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  --primary-color: #ff1a1a;
+  --button-color: #ffcc00;
+  --text-color: white;
+  --nav-text: #ffffff;
+  --background-color: #ff1a1a;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
 }
 
-a {
-  color: inherit;
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: var(--nav-text);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Mobile Menu Icon */
+.menuIcon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menuIcon div {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* Main Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Keeps content centered */
+  gap: 40px; /* Adjust space between text and image */
+  padding: 50px;
+}
+
+.content {
+  max-width: 50%;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+
+
+.heroImage {
+  max-width: 300px; /* Adjust size */
+  height: auto;
+  margin-right: 50px; /* Moves image slightly left */
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--button-color);
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
   text-decoration: none;
+  margin-top: 20px;
+  font-size: 1rem;
+  transition: 0.3s;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.btn:hover {
+  background: #ffd633;
+}
+
+/* Mobile Responsiveness */
+/* Mobile Responsiveness */
+/* Mobile Responsiveness */
+
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .pokedexImage {
+    max-width: 200px;
   }
 }
