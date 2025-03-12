@@ -20,14 +20,15 @@ export default function Home() {
         </nav>
 
         <section className="hero">
+        <div className="heroImage">
+          <Image src="/assets/pokedex.png" alt="Pokédex"  width={250} height={250} />
+          </div>
           <div className="content">
             <h1>Catch 'Em All!</h1>
             <p>Explore with Our Interactive Pokédex</p>
             <a href="#" className="btn">View Pokédex</a>
           </div>
-          <div className="heroImage">
-          <Image src="/assets/pokedex.png" alt="Pokédex"  width={250} height={250} />
-          </div>
+          
         </section>
       </div>
     </>
